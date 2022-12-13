@@ -1,0 +1,60 @@
+.p-container {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2.4rem;
+  width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 16px;
+}
+
+p {
+  margin-top: 8px;
+}
+
+.Projects {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+img {
+  width: 240px;
+}
+
+.project-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.P-cont {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: all ease 0.2s;
+  border-bottom: 1px solid black;
+}
+
+.info {
+  width: 56%;
+}
+
+@media (max-width: 768px) {
+  .info {
+    width: 64%;
+  }
+}
+
+h1 {
+  color: blue;
+  font-size: 2rem;
+  user-select: none;
+}

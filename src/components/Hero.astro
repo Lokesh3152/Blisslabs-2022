@@ -1,0 +1,104 @@
+---
+// Import Images Here
+import "../styles/Hero.css";
+---
+
+<link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
+<script src="../Js/cursor.js"></script>
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+<section class="Hero">
+  <div
+    id="wrapper"
+    class="Hero-container"
+    onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScGaUgVTZiLDiurv4E2XHIPOfUfG0lRXfj1OA87K-lSqAhv9g/viewform'"
+  >
+    <div class="sub"><h3>Bliss Labs</h3></div>
+    <div class="mid">
+      <p>
+        <span class="text">We're Building</span><br />
+        <span class="highlight text">an Open & Sustainable</span><br />
+        <span class="text">Future</span>
+      </p>
+    </div>
+    <div class="bottom">
+      <div class="year">2022</div>
+      <div class="ste">Scroll to explore</div>
+      <i class="gg-arrow-down icon"></i>
+    </div>
+  </div>
+
+  <!-- cursor -->
+  <div class="cursor"></div>
+  <!-- CURSOR-FOLLOWER -->
+  <div class="cursor-follower"></div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+  ></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</section>
+
+<style>
+  p,
+  h3 {
+    font-size: clamp(var(--min), var(--val), var(--max));
+    cursor: pointer;
+    user-select: none;
+  }
+
+  p {
+    --min: 2.5em;
+    --val: 8vw;
+    --max: 6em;
+    font-weight: 800;
+  }
+
+  h3 {
+    --min: 1em;
+    --val: 2.5vw;
+    --max: 1.2em;
+  }
+
+  .Hero-container {
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: 88vh;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #d8d8d8;
+    font-size: 0.9rem;
+    color: #4f4f4f;
+  }
+
+  .highlight {
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 10s infinite linear;
+  }
+
+  @-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+// import stuff here
+---
+
+<section id="aboutus">
+  <div class="container">
+    <div class="main">
+      <h1>About Us<br />(Our Mission)</h1>
+      <div class="info">
+        Blisslabs is a non profit organization that has a goal to create and
+        maintain various open source operating systems and other software that
+        helps to extend the life of devices in order to help with the world's
+        e-waste problems.<br />To do this, we work to mentor and teach future
+        open source developer's in all aspects of development, including design,
+        and animation and form alliances with other projects that share in our
+        visions. We also develop tools to help minimize the complex development
+        process and aid in learning.<br />And we act as a global host for open
+        source projects, allowing for a much larger opportunity to work with
+        others globally and increase user base.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h1 {
+    color: blue;
+    font-size: 2rem;
+    user-select: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info {
+    width: 64%;
+    margin-top: 2.8rem;
+    text-align: justify;
+    font-size: 1.2em;
+    user-select: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .info {
+      width: 100%;
+    }
+    .main {
+      flex-wrap: wrap;
+    }
+  }
+</style>

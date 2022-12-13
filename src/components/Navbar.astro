@@ -1,0 +1,184 @@
+---
+import logo from "../images/bliss_logo.svg";
+import projects from "../components/Projects.astro";
+import aboutus from "../components/Aboutus.astro";
+---
+
+<!-- Main Code -->
+<nav class="nav">
+  <div class="container">
+    <img src={logo} alt="Blisslabs Logo" class="logo" />
+    <div class="menu">
+      <a href="#" class="is-active">Home</a>
+      <a href="#aboutus">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#">Expenses</a>
+      <a href="#" class="cta">Donate</a>
+    </div>
+    <div class="mobile-menu">
+      <a href="#" class="is-active">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Expenses</a>
+      <a href="#" class="cta">Donate</a>
+    </div>
+
+    <button class="ham">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Css -->
+<style>
+  .logo {
+    width: 64px;
+    height: auto;
+  }
+
+  .donate {
+    padding: 8px 24px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav {
+    /* width: 100%; */
+    position: sticky;
+    top: 0%;
+    max-width: 1920px;
+    padding: 1rem 2rem;
+    z-index: 99;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1.6px solid #e9ecef;
+  }
+
+  .menu {
+    display: none;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6e6d7a;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+
+  .menu a:hover {
+    cursor: pointer;
+    color: blue;
+  }
+
+  .ham {
+    display: block;
+    position: relative;
+    z-index: 1;
+    background: none;
+    border: none;
+  }
+
+  .ham span {
+    display: block;
+    width: 32px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #121212;
+    border-radius: 8px;
+    transform-origin: 0 0;
+    transition: 0.2s;
+  }
+
+  .ham:hover span:nth-child(2) {
+    transform: translateX(8px);
+    background-color: blue;
+  }
+
+  .ham.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+  }
+  .ham.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .ham.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+  }
+
+  .ham.is-active:hover span {
+    background-color: blue;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.is-active {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 5rem 4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6e6d7a;
+    text-decoration: none;
+    transition: 0.4s;
+    background-color: whitesmoke;
+    width: 100%;
+  }
+
+  .mobile-menu a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #6e6d7a;
+  }
+
+  .cta {
+    padding: 0.6rem 1.4rem;
+    color: white !important;
+    background-color: blue;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .ham {
+      display: none !important;
+    }
+    .menu {
+      display: flex;
+    }
+  }
+</style>
+<!-- Script-->
+<script>
+  const hamburger = document.querySelector(".ham");
+  const menu = document.querySelector(".mobile-menu");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
+    menu.classList.toggle("is-active");
+  });
+</script>
